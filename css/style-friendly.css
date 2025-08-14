@@ -483,7 +483,7 @@ a {
   color: var(--purple-color);
 }
 .mil-arrow-link.mil-a2:after {
-  olor: var(--purple-color);
+  color: var(--purple-color);
 }
 .mil-arrow-link:hover:after {
   -webkit-transform: translateX(5px);
@@ -2728,7 +2728,7 @@ top panel
   position: fixed;
   z-index: 9999999;
   top: 0;
-  lfeft: 0;
+  left: 0;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2902,7 +2902,7 @@ top panel
   width: 100%;
   z-index: 9999999;
   top: 0;
-  lfeft: 0;
+  left: 0;
   width: 100%;
   height: 160px;
   display: -webkit-box;
@@ -5535,4 +5535,49 @@ footer
 }
 .mil-subscribe-form button i {
   font-size: 24px;
+}
+
+/* Slider Styles */
+.mil-hero-slider {
+  width: 100vw;
+  max-width: 100vw;
+  min-width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  position: relative;
+  height: 60vw;
+  max-height: 600px;
+  min-height: 250px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.mil-hero-slider .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.mil-hero-slider img {
+  width: 100vw;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  max-width: none;
+  max-height: none;
+}
+@media (max-width: 768px) {
+  .mil-hero-slider {
+    height: 40vw;
+    max-height: 300px;
+    min-height: 150px;
+  }
+  .mil-hero-slider img {
+    height: 100%;
+  }
 }
