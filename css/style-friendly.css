@@ -543,6 +543,9 @@ a {
 .mil-display2 {
   font-size: calc(1rem + 6vw);
   line-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @media (min-width: 1920px) {
   .mil-display2 {
@@ -5483,6 +5486,7 @@ footer
 .mil-footer-link {
   font-size: calc(1rem + 4.4vw);
   line-height: 100%;
+  width: 371px;
 }
 @media (min-width: 1920px) {
   .mil-footer-link {
