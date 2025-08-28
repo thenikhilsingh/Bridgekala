@@ -615,6 +615,10 @@ a {
   }
 }
 
+.head1{
+  width: 400px;
+}
+
 .mil-head1 {
   font-size: 56px;
   line-height: 120%;
