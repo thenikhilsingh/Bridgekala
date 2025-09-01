@@ -2608,7 +2608,7 @@ circle text
   transform: scale(1.5);
 }
 .mil-circle-text-frame .mil-circle-text svg text {
-  fill: #353639;
+  fill: white;
 }
 .mil-circle-text-frame .mil-circle-text .mil-arrow {
   -webkit-transform: rotate(-45deg);
@@ -2626,7 +2626,7 @@ circle text
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  background-color: #353639;
+  background-color: white;
 }
 .mil-circle-text-frame .mil-circle-text .mil-arrow i {
   font-size: 24px;
