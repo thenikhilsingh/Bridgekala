@@ -305,12 +305,16 @@
           <div id="smooth-content" class="mil-content">
             <!-- hero -->
             <div class="mil-hero-1 mil-up" id="top">
-              <div class="container mil-hero-main mil-relative mil-aic">
-                <div
-                  class="mil-hero-text mil-scale-img"
-                  data-value-1="1.3"
-                  data-value-2="0.95"
-                >
+              <div class="container mil-hero-main mil-relative mil-aic" style="position: relative; overflow: hidden;">
+              
+                <!-- Background Video -->
+                <video autoplay muted loop playsinline preload="auto" class="mil-bg-video">
+                  <source src="./Visual4.3 video1.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              
+                <!-- Existing Content -->
+                <div class="mil-hero-text mil-scale-img" data-value-1="1.3" data-value-2="0.95">
                   <div class="mil-text-pad"></div>
                   <i class="fal fa-award mil-mb15"></i>
                   <p class="mil-stylized mil-m2 mil-mb60">
@@ -319,24 +323,21 @@
                   </p>
                   <div class="mil-word-frame">
                     <h1 class="mil-display1 mil-rubber">Creativity</h1>
-                    <div class="mil-s-4">
+                    <!-- <div class="mil-s-4">
                       <img src="img/shapes/4.png" alt="shape" />
-                    </div>
+                    </div> -->
                   </div>
                   <h1 class="mil-display1 mil-rubber">Compounds</h1>
                   <div class="mil-word-frame mil-mb60">
                     <h1 class="mil-display1 mil-rubber">Growth.</h1>
-                    <div class="mil-s-5">
+                    <!-- <div class="mil-s-5">
                       <img src="img/shapes/5.png" alt="shape" />
-                    </div>
+                    </div> -->
                   </div>
                   <p class="mil-stylized mil-m2">Since 2017</p>
                 </div>
-                <div
-                  class="mil-shapes mil-scale-img"
-                  data-value-1=".7"
-                  data-value-2="1.11"
-                >
+              
+                <!-- <div class="mil-shapes mil-scale-img" data-value-1=".7" data-value-2="1.11">
                   <div class="mil-s-1">
                     <img src="img/shapes/1.png" alt="shape" />
                   </div>
@@ -346,8 +347,9 @@
                   <div class="mil-s-3">
                     <img src="img/shapes/3.png" alt="shape" />
                   </div>
-                </div>
+                </div> -->
               </div>
+
               <div class="mil-hero-img-frame" id="scroll">
                 <div
                   class="mil-circle-text-frame mil-parallax-img"

@@ -1395,6 +1395,27 @@ hero 1
 .mil-hero-1 .mil-hero-main {
   height: 100vh;
 }
+
+.container.mil-hero-main {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  /* override any template limits */
+  padding: 0;
+  margin: 0;
+}
+
+.mil-bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  /* full viewport width */
+  height: 100vh;
+  /* full viewport height */
+  object-fit: cover;
+  z-index: -1;
+}
 .mil-hero-1 .mil-hero-main .mil-hero-text {
   width: 100%;
   display: -webkit-box;
