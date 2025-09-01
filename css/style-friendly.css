@@ -72,6 +72,7 @@ main
 ------------------------------------------- */
 :root {
   --purple-color: #9d2ab9;
+  --white-color:#fff;
 }
 
 *,
@@ -680,7 +681,7 @@ a {
 }
 
 .mil-m2 {
-  color: #d5d5d5;
+  color: #7a7a7a;
 }
 
 .mil-m3 {
@@ -1542,7 +1543,7 @@ hero 1
   top: -95px;
   right: 15%;
   z-index: 2;
-  background-color: var(--purple-color);
+  /* background-color: var(--purple-color); */
   width: 190px;
   height: 190px;
   border-radius: 50%;
@@ -2600,7 +2601,13 @@ circle text
 ------------------------------------------- */
 .mil-circle-text-frame {
   z-index: 2;
-  background-color: var(--purple-color);
+    background: rgba(255, 255, 255, 0.12);
+      /* must have alpha */
+      box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(16px) saturate(140%);
+      -webkit-backdrop-filter: blur(16px) saturate(140%);
   width: 190px;
   height: 190px;
   border-radius: 50%;
@@ -2629,7 +2636,7 @@ circle text
   transform: scale(1.5);
 }
 .mil-circle-text-frame .mil-circle-text svg text {
-  fill: white;
+  fill: rgb(0, 0, 0);
 }
 .mil-circle-text-frame .mil-circle-text .mil-arrow {
   -webkit-transform: rotate(-45deg);
@@ -2647,11 +2654,11 @@ circle text
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  background-color: white;
+  background-color: var(--purple-color);
 }
 .mil-circle-text-frame .mil-circle-text .mil-arrow i {
   font-size: 24px;
-  color: var(--purple-color);
+  color: white;
 }
 @media (max-width: 992px) {
   .mil-circle-text-frame {
@@ -2785,7 +2792,13 @@ top panel
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  background-color: var(--purple-color);
+    background: rgba(189, 189, 189, 0.371);
+      /* must have alpha */
+      box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(16px) saturate(140%);
+      -webkit-backdrop-filter: blur(16px) saturate(140%);
   text-align: center;
   color: #ececea;
   -webkit-filter: drop-shadow(0px 0px 4px rgba(53, 54, 57, 0.1));
@@ -2829,7 +2842,13 @@ height: 15%;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  background-color: var(--purple-color);
+    background: rgba(255, 255, 255, 0.12);
+      /* must have alpha */
+      box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(16px) saturate(140%);
+      -webkit-backdrop-filter: blur(16px) saturate(140%);
   padding: 10px;
   border-radius: 80px;
   -webkit-filter: drop-shadow(0px 0px 4px rgba(53, 54, 57, 0.1));
@@ -2863,8 +2882,8 @@ height: 15%;
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  background-color: #fff;
-  color: var(--purple-color);
+  background-color: var(--purple-color);
+  color: var(--white-color);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2890,7 +2909,7 @@ height: 15%;
   -webkit-filter: blur(0);
   filter: blur(0);
   padding: 0 63px 0 30px;
-  color: #fff;
+  color: #000000;
   opacity: 1;
   max-width: 300px;
   -webkit-transform: translateX(0) scale(1);
@@ -3170,7 +3189,7 @@ height: 15%;
   border-radius: 1px;
   width: 22px;
   height: 2px;
-  background-color: var(--purple-color);
+  background-color: var(--white-color);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -webkit-transition: inherit;
