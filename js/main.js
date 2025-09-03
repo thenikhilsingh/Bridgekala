@@ -1230,3 +1230,107 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+// slider Script
+const track = document.getElementById("carousel-track");
+let slides = Array.from(track.children);
+const captions = [
+  "Boat Ride",
+  "Mountains",
+  "Lavender Field",
+  "Blue Man",
+  "Galaxy Face",
+  "Boat Ride",
+  "Mountains",
+];
+const subcaptions = [
+  "Travel",
+  "Nature",
+  "Photography",
+  "Art",
+  "Portrait",
+  "Travel",
+  "Nature",
+];
+let currentIndex = 0;
+let autoSlideInterval = null;
+
+function updateActive() {
+  slides = Array.from(track.children); // in case slides change
+  slides.forEach((slide, idx) => {
+    slide.classList.toggle("active", idx === currentIndex);
+  });
+  // Only update transform for sliding effect, do not touch caption/subcaption
+  track.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+
+function nextSlide() {
+  currentIndex = (currentIndex + 1) % slides.length;
+  updateActive();
+}
+
+function prevSlide() {
+  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+  updateActive();
+}
+
+function startAutoSlide() {
+  if (autoSlideInterval) clearInterval(autoSlideInterval);
+  autoSlideInterval = setInterval(() => {
+    nextSlide();
+  }, 2500);
+}
+
+function stopAutoSlide() {
+  if (autoSlideInterval) clearInterval(autoSlideInterval);
+}
+
+// Attach to manual navigation
+document
+  .querySelector(".carousel-container .arrow.left")
+  ?.addEventListener("click", () => {
+    prevSlide();
+    startAutoSlide();
+  });
+document
+  .querySelector(".carousel-container .arrow.right")
+  ?.addEventListener("click", () => {
+    nextSlide();
+    startAutoSlide();
+  });
+
+updateActive();
+startAutoSlide();
+
+function updateActive() {
+  slides.forEach((slide, idx) => {
+    slide.classList.remove("active", "tilt-left", "tilt-right");
+
+    if (idx === Math.floor(slides.length / 2)) {
+      slide.classList.add("active"); // center slide
+    } else if (idx < Math.floor(slides.length / 2)) {
+      slide.classList.add("tilt-left"); // left side
+    } else {
+      slide.classList.add("tilt-right"); // right side
+    }
+  });
+}
+
+
+function nextSlide() {
+  // Move first slide to end, increment index
+  track.appendChild(slides[0]);
+  currentIndex = (currentIndex + 1) % slides.length;
+  slides = Array.from(track.children);
+  updateActive();
+}
+
+function prevSlide() {
+  // Move last slide to start, decrement index
+  track.insertBefore(slides[slides.length - 1], slides[0]);
+  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+  slides = Array.from(track.children);
+  updateActive();
+}
+
+updateActive();
