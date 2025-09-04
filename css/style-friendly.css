@@ -5704,7 +5704,7 @@ footer
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgb(125 122 122 / 31%);
+  background: #9c2ab95d;
   color: white;
   font-size: 24px;
   border: none;
@@ -5720,7 +5720,7 @@ footer
 }
 
 .arrow:hover {
-  color: rgb(125 122 122 / 100%);
+  color: rgb(125, 122, 125);
   scale: 1.06;
   background-color: white;
   box-shadow: 0 0 8px rgba(128, 128, 128, 0.6);
@@ -5731,11 +5731,11 @@ footer
 }
 
 .arrow.left {
-  left: 10px;
+  right: 63%;
 }
 
 .arrow.right {
-  right: 10px;
+  left: 63%;
 }
 
 .caption {
