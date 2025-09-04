@@ -3712,7 +3712,7 @@ iconbox
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
-.mil-iconbox img {
+.mil-iconbox video {
   width: 120px;
 }
 .mil-iconbox i {
@@ -3721,7 +3721,7 @@ iconbox
   -webkit-text-stroke: 1.5px rgba(128, 128, 128, 0.6);
 }
 @media (max-width: 768px) {
-  .mil-iconbox img {
+  .mil-iconbox video {
     width: 90px;
   }
 }
