@@ -1569,12 +1569,12 @@
                         >newsletter</span
                       >
                     </h2>
-                    <form class="mil-subscribe-form mil-up mil-c-gone">
-                      <input type="text" placeholder="Enter your email" />
-                      <button type="submit">
-                        <i class="fal fa-arrow-right"></i>
-                      </button>
-                    </form>
+                  <form id="newsletter-form" class="mil-subscribe-form mil-up mil-c-gone">
+  <input type="email" name="email" placeholder="Enter your email" required />
+  <button type="submit">
+    <i class="fal fa-arrow-right"></i>
+  </button>
+</form>
                   </div>
                   <div class="mil-image-box">
                     <div class="mil-image-frame">
@@ -1793,5 +1793,32 @@
     <script src="js/plugins/parallax.js"></script>
     <!-- pixy js -->
     <script src="js/main.js"></script>
+    <script>
+  // Replace with your actual Google Apps Script Web App URL
+  const scriptURL = "https://script.google.com/macros/s/AKfycbwC3e0ZY8x8XnNn-WjhYgCtZeow-swjyUT2vHUCQybYpelcC9Qj6AU4Kd16nYhaPFgv/exec"; 
+
+  document.getElementById("newsletter-form").addEventListener("submit", function(e) {
+    e.preventDefault(); // stop form from refreshing page
+
+    // Get form data
+    const formData = new FormData(this);
+
+    // Send data as application/x-www-form-urlencoded (so e.parameter[...] works)
+    fetch(scriptURL, {
+      method: "POST",
+      body: new URLSearchParams(formData)
+    })
+    .then(res => res.json())
+    .then(data => {
+      console.log("Success:", data);
+      alert("✅ Thanks for subscribing!");
+      this.reset(); // clear form
+    })
+    .catch(err => {
+      console.error("Error:", err);
+      alert("❌ Something went wrong, try again.");
+    });
+  });
+</script>
   </body>
 </html>
