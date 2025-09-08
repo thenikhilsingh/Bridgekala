@@ -1253,3 +1253,21 @@ var swiper = new Swiper(".mySwiper", {
     el: ".swiper-pagination",
   },
 });
+
+
+// Logo click: scroll to top on first click, force reload on second click
+      let logoClicked = false;
+      const logo = document.getElementById("logo-link");
+      if (logo) {
+        logo.addEventListener("click", function (e) {
+          if (!logoClicked) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+            logoClicked = true;
+          } else {
+            e.preventDefault();
+            // Always reload index.html on second click, even if already on it
+            window.location.href = "index.html";
+          }
+        });
+      }
