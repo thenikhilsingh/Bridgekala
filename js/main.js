@@ -40,17 +40,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   /* -------------------------------------------
 
-    swup
-
-    ------------------------------------------- */
-
-  const swup = new Swup({
-    containers: ["#swup", "#swupMenu", "#swup-opm"],
-    animateHistoryBrowsing: true,
-  });
-
-  /* -------------------------------------------
-
     register gsap plugins
 
     ------------------------------------------- */
@@ -1254,20 +1243,92 @@ var swiper = new Swiper(".mySwiper", {
   },
 });
 
-
 // Logo click: scroll to top on first click, force reload on second click
-      let logoClicked = false;
-      const logo = document.getElementById("logo-link");
-      if (logo) {
-        logo.addEventListener("click", function (e) {
-          if (!logoClicked) {
-            e.preventDefault();
-            window.scrollTo({ top: 0, behavior: "smooth" });
-            logoClicked = true;
-          } else {
-            e.preventDefault();
-            // Always reload index.html on second click, even if already on it
-            window.location.href = "index.html";
-          }
-        });
-      }
+let logoClicked = false;
+const logo = document.getElementById("logo-link");
+if (logo) {
+  logo.addEventListener("click", function (e) {
+    if (!logoClicked) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      logoClicked = true;
+    } else {
+      e.preventDefault();
+      // Always reload index.html on second click, even if already on it
+      window.location.href = "index.html";
+    }
+  });
+}
+
+// --- Carousel Slider Robust Swup Fix ---
+function initCarouselSlider() {
+  const track = document.getElementById("carousel-track");
+  if (!track) return;
+  let slides = Array.from(track.children);
+
+  // Remove any previous interval
+  if (window._carouselAutoSlideInterval) {
+    clearInterval(window._carouselAutoSlideInterval);
+    window._carouselAutoSlideInterval = null;
+  }
+
+  // Remove previous listeners by cloning buttons
+  const leftBtn = document.querySelector(".carousel-container .arrow.left");
+  const rightBtn = document.querySelector(".carousel-container .arrow.right");
+  if (leftBtn) {
+    const newLeft = leftBtn.cloneNode(true);
+    leftBtn.parentNode.replaceChild(newLeft, leftBtn);
+  }
+  if (rightBtn) {
+    const newRight = rightBtn.cloneNode(true);
+    rightBtn.parentNode.replaceChild(newRight, rightBtn);
+  }
+  const leftBtnNew = document.querySelector(".carousel-container .arrow.left");
+  const rightBtnNew = document.querySelector(
+    ".carousel-container .arrow.right"
+  );
+
+  function updateActive() {
+    slides = Array.from(track.children);
+    slides.forEach((slide, idx) => {
+      slide.classList.toggle("active", idx === Math.floor(slides.length / 2));
+    });
+  }
+
+  function nextSlide() {
+    track.appendChild(slides[0]);
+    slides = Array.from(track.children);
+    updateActive();
+  }
+
+  function prevSlide() {
+    track.insertBefore(slides[slides.length - 1], slides[0]);
+    slides = Array.from(track.children);
+    updateActive();
+  }
+
+  function startAutoSlide() {
+    window._carouselAutoSlideInterval = setInterval(() => {
+      nextSlide();
+    }, 2500);
+  }
+
+  if (leftBtnNew)
+    leftBtnNew.addEventListener("click", () => {
+      prevSlide();
+      startAutoSlide();
+    });
+  if (rightBtnNew)
+    rightBtnNew.addEventListener("click", () => {
+      nextSlide();
+      startAutoSlide();
+    });
+
+  updateActive();
+  startAutoSlide();
+}
+
+document.addEventListener("DOMContentLoaded", initCarouselSlider);
+window.addEventListener("load", initCarouselSlider);
+
+updateActive();
