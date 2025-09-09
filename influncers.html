@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" href="img/Bridgekala-symbol.png" type="image/x-icon" />
+    <!-- grid css -->
+    <link rel="stylesheet" href="css/plugins/bootstrap-grid.css" />
+    <!-- font awesome css -->
+    <link rel="stylesheet" href="css/plugins/fontawesome.min.css" />
+    <!-- swiper css -->
+    <link rel="stylesheet" href="css/plugins/swiper.min.css" />
+    <!-- okai css -->
+    <link rel="stylesheet" href="css/style-friendly.css" />
+    <!-- page title -->
+    <title>Bridgekala — Creators</title>
+
+    <style>
+        body {
+            background: #fff;
+            /* White page background */
+            margin: 0;
+            font: 16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial;
+            color: #111;
+        }
+
+        .page {
+            min-height: 100%;
+            padding: 60px 18px 80px;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .page h1 {
+            font-size: 32px;
+            font-weight: 700;
+            margin: 0 0 18px;
+        }
+
+        .page .sub {
+            color: #666;
+            margin: 0 0 26px;
+            font-size: 15px;
+        }
+
+        /* Masonry grid */
+        .creator-grid {
+            column-width: 280px;
+            column-gap: 20px;
+        }
+
+        @media (max-width: 640px) {
+            .creator-grid {
+                column-width: 220px;
+            }
+        }
+
+        .creator-card {
+            display: inline-block;
+            width: 100%;
+            margin: 0 0 20px;
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            background: #fafafa;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, .08);
+            transition: transform .25s ease, box-shadow .25s ease;
+        }
+
+        .creator-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 28px rgba(0, 0, 0, .12);
+        }
+
+        .creator-card .media {
+            display: block;
+            width: 100%;
+        }
+
+        .h-sm {
+            height: 260px;
+        }
+
+        .h-md {
+            height: 340px;
+        }
+
+        .h-lg {
+            height: 420px;
+        }
+
+        .h-xl {
+            height: 520px;
+        }
+
+        .creator-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .creator-card .meta {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 14px 16px;
+            background: linear-gradient(to top, rgba(0, 0, 0, .6) 0%, rgba(0, 0, 0, .0) 70%);
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            color: #fff;
+        }
+
+        .creator-card .who {
+            max-width: calc(100% - 52px);
+        }
+
+        .creator-card .name {
+            margin: 0 0 2px;
+            font-weight: 700;
+            font-size: 15px;
+        }
+
+        .creator-card .loc {
+            margin: 0;
+            font-size: 12px;
+            opacity: .9;
+        }
+
+        .creator-card .add {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, .1);
+            border: 1px solid rgba(255, 255, 255, .2);
+            display: grid;
+            place-items: center;
+            color: #fff;
+            backdrop-filter: blur(6px);
+            transition: background .2s ease, transform .2s ease;
+        }
+
+        .creator-card .add:hover {
+            background: rgba(255, 255, 255, .25);
+            transform: scale(1.05);
+        }
+
+        .creator-card .add svg {
+            width: 18px;
+            height: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- wrapper -->
+    <div id="smooth-wrapper" class="mil-page-wrapper">
+        <div id="swup-opm"></div>
+
+        <!-- cursor -->
+        <div class="mil-cursor-follower"></div>
+        <!-- cursor end -->
+
+        <!-- preloader -->
+        <!-- <div class="mil-preloader">
+            <div class="mil-preloader-animation">
+                <div class="mil-pos-abs mil-animation-1">
+                    <p class="mil-head1 mil-m1">Performance</p>
+                    <p class="mil-head1 mil-a2">Growth</p>
+                    <p class="mil-head1 mil-m1">Leadership</p>
+                </div>
+                <div class="mil-pos-abs mil-animation-2">
+                    <div class="mil-reveal-frame">
+                        <p class="mil-reveal-box"></p>
+                        <p class="mil-head1 mil-m1">Bridgekala</p>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- preloader end -->
+
+        <!-- scroll progress -->
+        <div class="mil-progress-track">
+            <div class="mil-progress"></div>
+        </div>
+
+        <!-- fixed header/menu -->
+        <div class="mil-fixed">
+            <div class="mil-top-panel">
+                <div class="mil-left-side">
+                    <a href="index.html" id="logo-link" class="mil-logo mil-scroll-to" data-no-swup>
+                        <img class="mil-logo-img1" src="img/Bridgekala-symbol.png" alt="" />
+                        <img class="mil-logo-img2" src="img/Bridgekala-logo.png" alt="" />
+                    </a>
+                </div>
+                <div class="mil-buttons-tp-frame mil-c-gone">
+                    <p class="mil-stylized mil-m1 mil-phone">
+                        <span class="mil-m2">Phone:</span> +91 9212342345
+                    </p>
+                    <div class="mil-buttons">
+                        <a href="contact-frl.html" class="mil-tp-btn"><i class="fal fa-envelope"></i></a>
+                        <div class="mil-tp-btn">
+                            <div class="mil-menu-btn"><span></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- your existing menu frame & social links remain untouched -->
+        </div>
+        <!-- fixed end -->
+
+        <!-- page transition -->
+        <div class="mil-transition-fade" id="swup">
+            <div class="mil-transition-frame">
+                <div id="smooth-content" class="mil-content">
+
+                    <!-- creators grid -->
+                    <main class="page">
+                        <h1>Creators</h1>
+                        <p class="sub">Handpicked profiles across India</p>
+
+                    <section class="creator-grid">
+                    
+                        <!-- Repeat creator-card blocks; vary h-sm/h-md/h-lg/h-xl for layout mix -->
+                        <article class="creator-card h-lg">
+                            <a class="media" href="#">
+                                <img src="img/creators/sutej.jpg" alt="Sutej Pannu" />
+                            </a>
+                            <div class="meta">
+                                <div class="who">
+                                    <p class="name">Sutej Pannu</p>
+                                    <p class="loc">Mumbai, India</p>
+                                </div>
+                                <button class="add" aria-label="Add Sutej">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M12 5v14M5 12h14" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </article>
+                    
+                        <article class="creator-card h-md">
+                            <a class="media" href="#"><img src="img/creators/priyam.jpg" alt="Priyam Saraswat"></a>
+                            <div class="meta">
+                                <div class="who">
+                                    <p class="name">Priyam Saraswat</p>
+                                    <p class="loc">Delhi, India</p>
+                                </div><button class="add" aria-label="Add Priyam"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M12 5v14M5 12h14" />
+                                    </svg></button>
+                            </div>
+                        </article>
+                    
+                        <article class="creator-card h-lg">
+                            <a class="media" href="#"><img src="img/creators/nikhil.jpg" alt="Mumbiker Nikhil"></a>
+                            <div class="meta">
+                                <div class="who">
+                                    <p class="name">Mumbiker Nikhil</p>
+                                    <p class="loc">Mumbai</p>
+                                </div><button class="add" aria-label="Add Nikhil"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M12 5v14M5 12h14" />
+                                    </svg></button>
+                            </div>
+                        </article>
+                    
+                        <article class="creator-card h-xl">
+                            <a class="media" href="#"><img src="img/creators/harsh.jpg" alt="Harsh Likhari"></a>
+                            <div class="meta">
+                                <div class="who">
+                                    <p class="name">Harsh Likhari</p>
+                                    <p class="loc">Punjab</p>
+                                </div><button class="add" aria-label="Add Harsh"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M12 5v14M5 12h14" />
+                                    </svg></button>
+                            </div>
+                        </article>
+                    
+                        <article class="creator-card h-md">
+                            <a class="media" href="#"><img src="img/creators/ankit.jpg" alt="Ankit Baiyanpuria"></a>
+                            <div class="meta">
+                                <div class="who">
+                                    <p class="name">Ankit Baiyanpuria</p>
+                                    <p class="loc">Haryana</p>
+                                </div><button class="add" aria-label="Add Ankit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M12 5v14M5 12h14" />
+                                    </svg></button>
+                            </div>
+                        </article>
+                    
+                        <article class="creator-card h-md">
+                            <a class="media" href="#"><img src="img/creators/joseph.jpg" alt="Joseph Radhik"></a>
+                            <div class="meta">
+                                <div class="who">
+                                    <p class="name">Joseph Radhik</p>
+                                    <p class="loc">Mumbai</p>
+                                </div><button class="add" aria-label="Add Joseph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M12 5v14M5 12h14" />
+                                    </svg></button>
+                            </div>
+                        </article>
+                    
+                        <article class="creator-card h-lg">
+                            <a class="media" href="#"><img src="img/creators/pearle.jpg" alt="Pearle Maaney"></a>
+                            <div class="meta">
+                                <div class="who">
+                                    <p class="name">Pearle Maaney</p>
+                                    <p class="loc">Kochi</p>
+                                </div><button class="add" aria-label="Add Pearle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M12 5v14M5 12h14" />
+                                    </svg></button>
+                            </div>
+                        </article>
+                    
+                        <article class="creator-card h-lg">
+                            <a class="media" href="#"><img src="img/creators/yashi.jpg" alt="Yashi Tank"></a>
+                            <div class="meta">
+                                <div class="who">
+                                    <p class="name">Yashi Tank</p>
+                                    <p class="loc">Jaipur</p>
+                                </div><button class="add" aria-label="Add Yashi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M12 5v14M5 12h14" />
+                                    </svg></button>
+                            </div>
+                        </article>
+                        <article class="creator-card h-lg">
+                            <a class="media" href="#">
+                                <img src="img/creators/sutej.jpg" alt="Sutej Pannu" />
+                            </a>
+                            <div class="meta">
+                                <div class="who">
+                                    <p class="name">Sutej Pannu</p>
+                                    <p class="loc">Mumbai, India</p>
+                                </div>
+                                <button class="add" aria-label="Add Sutej">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M12 5v14M5 12h14" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </article>
+                    
+                        <article class="creator-card h-md">
+                            <a class="media" href="#"><img src="img/creators/priyam.jpg" alt="Priyam Saraswat"></a>
+                            <div class="meta">
+                                <div class="who">
+                                    <p class="name">Priyam Saraswat</p>
+                                    <p class="loc">Delhi, India</p>
+                                </div><button class="add" aria-label="Add Priyam"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M12 5v14M5 12h14" />
+                                    </svg></button>
+                            </div>
+                        </article>
+                    
+                        <article class="creator-card h-lg">
+                            <a class="media" href="#"><img src="img/creators/nikhil.jpg" alt="Mumbiker Nikhil"></a>
+                            <div class="meta">
+                                <div class="who">
+                                    <p class="name">Mumbiker Nikhil</p>
+                                    <p class="loc">Mumbai</p>
+                                </div><button class="add" aria-label="Add Nikhil"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M12 5v14M5 12h14" />
+                                    </svg></button>
+                            </div>
+                        </article>
+                    
+                        <article class="creator-card h-xl">
+                            <a class="media" href="#"><img src="img/creators/harsh.jpg" alt="Harsh Likhari"></a>
+                            <div class="meta">
+                                <div class="who">
+                                    <p class="name">Harsh Likhari</p>
+                                    <p class="loc">Punjab</p>
+                                </div><button class="add" aria-label="Add Harsh"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M12 5v14M5 12h14" />
+                                    </svg></button>
+                            </div>
+                        </article>
+                    
+                        <article class="creator-card h-md">
+                            <a class="media" href="#"><img src="img/creators/ankit.jpg" alt="Ankit Baiyanpuria"></a>
+                            <div class="meta">
+                                <div class="who">
+                                    <p class="name">Ankit Baiyanpuria</p>
+                                    <p class="loc">Haryana</p>
+                                </div><button class="add" aria-label="Add Ankit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M12 5v14M5 12h14" />
+                                    </svg></button>
+                            </div>
+                        </article>
+                    
+                        <article class="creator-card h-md">
+                            <a class="media" href="#"><img src="img/creators/joseph.jpg" alt="Joseph Radhik"></a>
+                            <div class="meta">
+                                <div class="who">
+                                    <p class="name">Joseph Radhik</p>
+                                    <p class="loc">Mumbai</p>
+                                </div><button class="add" aria-label="Add Joseph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M12 5v14M5 12h14" />
+                                    </svg></button>
+                            </div>
+                        </article>
+                    
+                        <article class="creator-card h-lg">
+                            <a class="media" href="#"><img src="img/creators/pearle.jpg" alt="Pearle Maaney"></a>
+                            <div class="meta">
+                                <div class="who">
+                                    <p class="name">Pearle Maaney</p>
+                                    <p class="loc">Kochi</p>
+                                </div><button class="add" aria-label="Add Pearle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M12 5v14M5 12h14" />
+                                    </svg></button>
+                            </div>
+                        </article>
+                    
+                        <article class="creator-card h-lg">
+                            <a class="media" href="#"><img src="img/creators/yashi.jpg" alt="Yashi Tank"></a>
+                            <div class="meta">
+                                <div class="who">
+                                    <p class="name">Yashi Tank</p>
+                                    <p class="loc">Jaipur</p>
+                                </div><button class="add" aria-label="Add Yashi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M12 5v14M5 12h14" />
+                                    </svg></button>
+                            </div>
+                        </article>
+                    
+                        <!-- Add as many as you need -->
+                    </section>
+                    </main>
+                    <!-- end grid -->
+
+                    <!-- footer -->
+                    <footer class="mil-footer mil-p-160-160">
+                        <!-- your full footer code stays same -->
+                    </footer>
+                </div>
+            </div>
+        </div>
+        <!-- page transition end -->
+    </div>
+
+    <!-- scripts -->
+    <script src="js/plugins/swup.min.js"></script>
+    <script src="js/plugins/gsap.min.js"></script>
+    <script src="js/plugins/ScrollSmoother.min.js"></script>
+    <script src="js/plugins/ScrollTrigger.min.js"></script>
+    <script src="js/plugins/ScrollTo.min.js"></script>
+    <script src="js/plugins/swiper.min.js"></script>
+    <script src="js/plugins/parallax.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
