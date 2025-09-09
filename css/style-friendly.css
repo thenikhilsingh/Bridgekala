@@ -5668,3 +5668,38 @@ footer
   border-radius: 24px;
   display: block;
 }
+
+
+:root {
+  --animationSpeed: 40s;
+  /* CSS variable instead of SCSS variable */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
+}
+
+.slider {
+  height: 100px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: auto;
+}
+
+.slider .slide-track {
+  display: flex;
+  width: calc(250px * 14);
+  animation: scroll var(--animationSpeed) linear infinite;
+}
+
+.slider .slide {
+  height: 100px;
+  width: 250px;
+}
