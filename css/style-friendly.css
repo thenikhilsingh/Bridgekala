@@ -5627,19 +5627,13 @@ footer
   border-radius: 15px;
 }
 
-/* Apply the same height and radius to Wistia player */
-.card-cont wistia-player {
+.card-cont video {
   height: 85%;
   border-radius: 15px;
-  display: block;
-  width: 100%;
 }
-
-/* Fallback if <wistia-player> renders as iframe inside */
-.card-cont wistia-player iframe {
+.wistia-player {
   width: 100%;
-  height: 100%;
-  border-radius: 15px;
+  max-width: 100%;
 }
 
 .card-text-cont {
@@ -5729,32 +5723,28 @@ footer
 .arrow.right {
   right: 10px;
 }
-
 @media (max-width: 550px) {
   .arrow:hover {
     color: white;
     background: rgb(125 122 122 / 31%);
   }
 }
-
 .caption {
   font-weight: bold;
   font-size: 18px;
   margin-top: 15px;
 }
 
-/* If swiper-slidee is used elsewhere */
 .swiper-slidee {
   background-position: center;
   background-size: cover;
   width: 300px;
   height: 450px;
-  overflow: hidden;
+ overflow: hidden;
   border-radius: 24px;
 }
 
-.swiper-slidee video,
-.swiper-slidee wistia-player {
+.swiper-slidee video {
   width: 100%;
   height: 100%;
   object-fit: cover;
