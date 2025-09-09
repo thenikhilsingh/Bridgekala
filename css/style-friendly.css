@@ -5608,7 +5608,16 @@ footer
 .quote-area-bg {
   height: 100%;
   width: 100%;
-  background-color: yellowgreen;
+  background: linear-gradient(
+    90deg,
+    hsla(238, 100%, 71%, 1) 0%,
+    hsla(295, 100%, 84%, 1) 100%
+  );
+  background: linear-gradient(
+    90deg,
+    hsla(238, 100%, 71%, 1) 0%,
+    hsla(295, 100%, 84%, 1) 100%
+  );
   position: relative;
 }
 
@@ -5750,6 +5759,7 @@ footer
   width: 300px;
   height: 450px;
   overflow: hidden;
+  overflow: hidden;
   border-radius: 24px;
 }
 
@@ -5797,3 +5807,4 @@ footer
   height: 100px;
   width: 250px;
 }
+
