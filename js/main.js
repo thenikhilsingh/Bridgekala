@@ -1244,19 +1244,13 @@ var swiper = new Swiper(".mySwiper", {
 });
 
 // Logo click: scroll to top on first click, force reload on second click
-let logoClicked = false;
+// Logo click: always redirect to index.html
 const logo = document.getElementById("logo-link");
 if (logo) {
   logo.addEventListener("click", function (e) {
-    if (!logoClicked) {
-      e.preventDefault();
-      window.scrollTo({ top: 0, behavior: "smooth" });
-      logoClicked = true;
-    } else {
-      e.preventDefault();
-      // Always reload index.html on second click, even if already on it
-      window.location.href = "index.html";
-    }
+    // Always redirect to index.html on every click
+    e.preventDefault();
+    window.location.href = "index.html";
   });
 }
 
