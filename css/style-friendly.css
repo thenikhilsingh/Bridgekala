@@ -5603,7 +5603,6 @@ footer
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 
 .quote-area-bg {
@@ -5627,6 +5626,13 @@ footer
   font-size: 50px;
   font-weight: bold;
   position: absolute;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  width: 1000px;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
 /* slider styles */
