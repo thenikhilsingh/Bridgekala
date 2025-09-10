@@ -1290,8 +1290,20 @@ function initCarouselSlider() {
 
   function updateActive() {
     slides = Array.from(track.children);
+    const center = Math.floor(slides.length / 2);
     slides.forEach((slide, idx) => {
-      slide.classList.toggle("active", idx === Math.floor(slides.length / 2));
+      slide.classList.remove("active", "next", "prev", "next2", "prev2");
+      if (idx === center) {
+        slide.classList.add("active");
+      } else if (idx === center - 1) {
+        slide.classList.add("prev");
+      } else if (idx === center + 1) {
+        slide.classList.add("next");
+      } else if (idx === center - 2) {
+        slide.classList.add("prev2");
+      } else if (idx === center + 2) {
+        slide.classList.add("next2");
+      }
     });
   }
 

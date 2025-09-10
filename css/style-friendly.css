@@ -5629,6 +5629,32 @@ footer
 }
 
 /* slider styles */
+/* Carousel Card Scaling */
+.slide.card-cont {
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), z-index 0.4s,
+    opacity 0.4s;
+  transform: scale(0.7);
+  z-index: 1;
+  opacity: 0.5;
+}
+.slide.card-cont.active {
+  transform: scale(1);
+  z-index: 4;
+  opacity: 1;
+}
+.slide.card-cont.next,
+.slide.card-cont.prev {
+  transform: scale(0.85);
+  z-index: 3;
+  opacity: 0.8;
+}
+.slide.card-cont.next2,
+.slide.card-cont.prev2 {
+  transform: scale(0.75);
+  z-index: 2;
+  opacity: 0.6;
+}
+/* Carousel Card Scaling */
 .card-cont {
   background-color: gray;
   width: fit-content;
@@ -5647,7 +5673,6 @@ footer
 
 .card-text-cont {
   display: flex;
-  gap: 10px;
   align-items: center;
   padding: 20px;
   color: #9d2ab9;
@@ -5657,8 +5682,8 @@ footer
 
 .carousel-container {
   position: relative;
-  width: 80%;
-  margin: 100px auto;
+  width: 50%;
+  margin: 0 auto;
   overflow: hidden;
 }
 
@@ -5666,7 +5691,6 @@ footer
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 15px;
   transition: transform 0.4s ease;
   height: 600px;
 }
@@ -5749,7 +5773,7 @@ footer
   background-size: cover;
   width: 300px;
   height: 450px;
- overflow: hidden;
+  overflow: hidden;
   border-radius: 24px;
 }
 
@@ -5760,7 +5784,7 @@ footer
   border-radius: 24px;
   display: block;
 }
- 
+
 /* logo slider */
 
 :root {
@@ -5796,4 +5820,3 @@ footer
   height: 100px;
   width: 250px;
 }
-
