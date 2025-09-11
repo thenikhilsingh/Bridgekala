@@ -5638,21 +5638,25 @@ footer
 /* slider styles */
 /* Carousel Card Scaling */
 .slide.card-cont {
-  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), z-index 0.4s,
-    opacity 0.4s;
+  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1), z-index 0.4s,
+    opacity 0.7s, box-shadow 0.7s, filter 0.7s;
   transform: scale(0.7);
   z-index: 1;
   opacity: 0.5;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
+  filter: blur(1px);
 }
 .slide.card-cont.active {
   transform: scale(1);
   z-index: 4;
   opacity: 1;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+  filter: none;
 }
 
 .slide.card-cont.next {
   transform: scale(0.85) perspective(600px) rotateY(6deg);
-   z-index: 3;
+  z-index: 3;
   opacity: 0.8;
 }
 .slide.card-cont.prev {
@@ -5663,7 +5667,7 @@ footer
 
 .slide.card-cont.next2 {
   transform: scale(0.75) perspective(600px) rotateY(12deg);
-    z-index: 2;
+  z-index: 2;
   opacity: 0.6;
 }
 .slide.card-cont.prev2 {

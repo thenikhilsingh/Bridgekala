@@ -1256,6 +1256,8 @@ if (logo) {
 
 // --- Carousel Slider Robust Swup Fix ---
 function initCarouselSlider() {
+  let isSliding = false;
+  let slideDirection = 0; // -1 for left, 1 for right
   const track = document.getElementById("carousel-track");
   if (!track) return;
   let slides = Array.from(track.children);
