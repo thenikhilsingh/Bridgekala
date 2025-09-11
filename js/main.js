@@ -1314,6 +1314,9 @@ function initCarouselSlider() {
   }
 
   function startAutoSlide() {
+    if (window._carouselAutoSlideInterval) {
+      clearInterval(window._carouselAutoSlideInterval);
+    }
     window._carouselAutoSlideInterval = setInterval(() => {
       nextSlide();
     }, 2500);
