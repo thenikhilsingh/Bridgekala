@@ -5608,21 +5608,12 @@ footer
 .quote-area-bg {
   height: 100%;
   width: 100%;
-  background: linear-gradient(
-    90deg,
-    hsla(238, 100%, 71%, 1) 0%,
-    hsla(295, 100%, 84%, 1) 100%
-  );
-  background: linear-gradient(
-    90deg,
-    hsla(238, 100%, 71%, 1) 0%,
-    hsla(295, 100%, 84%, 1) 100%
-  );
   position: relative;
+  object-fit: cover;
 }
 
 .quote-area-text {
-  color: white;
+  color: rgb(122, 120, 120);
   font-size: 50px;
   font-weight: bold;
   position: absolute;
