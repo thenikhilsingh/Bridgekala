@@ -1420,6 +1420,15 @@ hero 1
 }
 /* video background mobile  */
 
+@media (max-width: 1503px) {
+  .mil-bg-video {
+    object-fit: contain;
+  }
+  .mil-hero-1 .mil-hero-main {
+    height: 97vh;
+  }
+}
+
 .mil-hero-1 .mil-hero-main .mil-hero-text {
   width: 100%;
   display: -webkit-box;
@@ -5654,28 +5663,25 @@ footer
 }
 
 @media (max-width: 875px) {
-  .quote-btn a{
+  .quote-btn a {
     padding: 0px 20px !important;
     height: 55px !important;
   }
 }
 @media (max-width: 730px) {
   .quote-area-text {
-        font-size: 26px;
-       
-    }
+    font-size: 26px;
+  }
 }
 @media (max-width: 609px) {
- .quote-area-text {
-        font-size: 14px;
-    }
-    .quote-btn a {
-        padding: 0px 9px !important;
-        height: 36px !important;
-    }
+  .quote-area-text {
+    font-size: 14px;
+  }
+  .quote-btn a {
+    padding: 0px 9px !important;
+    height: 36px !important;
+  }
 }
-
-
 
 /* slider styles */
 /* Carousel Card Scaling */
