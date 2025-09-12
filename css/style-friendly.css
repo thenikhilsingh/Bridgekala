@@ -5780,6 +5780,78 @@ footer
   margin-top: 15px;
 }
 
+@media (max-width: 1640px) {
+  .carousel-container {
+    width: 58%;
+  }
+}
+@media (max-width: 1415px) {
+  .carousel-container {
+    width: 67%;
+  }
+}
+@media (max-width: 1241px) {
+  .carousel-container {
+    width: 77%;
+  }
+}
+@media (max-width: 1081px) {
+  .carousel-container {
+    width: 88%;
+  }
+}
+@media (max-width: 947px) {
+  .slide {
+    height: 436px;
+  }
+  .slide.active {
+    height: 465px;
+  }
+  .slide img {
+    height: 23px;
+    
+  }
+  .card-text-cont h3 {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 800px) {
+  .slide {
+    height: 372px;
+  }
+  .slide.active {
+    height: 450px;
+  }
+}
+
+@media (max-width: 708px) {
+  .slide {
+    height: 300px;
+  }
+  .slide.active {
+    height: 325px;
+  }
+   .slide img {
+    height: 15px;
+  }
+  .card-text-cont h3 {
+    font-size: 6px;
+  }
+  .card-text-cont {
+    padding: 15px;
+  }
+}
+@media (max-width: 595px) {
+  .slide {
+    height: 300px;
+  }
+  .slide.active {
+    height: 325px;
+  }
+}
+/* slider styles */
+
 .swiper-slidee {
   background-position: center;
   background-size: cover;

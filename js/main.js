@@ -1327,16 +1327,16 @@ function initCarouselSlider() {
   if (leftBtnNew)
     leftBtnNew.addEventListener("click", () => {
       prevSlide();
-      startAutoSlide();
+      // startAutoSlide();
     });
   if (rightBtnNew)
     rightBtnNew.addEventListener("click", () => {
       nextSlide();
-      startAutoSlide();
+      // startAutoSlide();
     });
 
   updateActive();
-  startAutoSlide();
+  // startAutoSlide();
 }
 
 document.addEventListener("DOMContentLoaded", initCarouselSlider);
