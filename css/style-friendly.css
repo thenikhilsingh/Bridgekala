@@ -1418,16 +1418,6 @@ hero 1
   transform: translate(-50%, -50%);
   z-index: 0;
 }
-/* video background mobile  */
-
-@media (max-width: 1503px) {
-  .mil-bg-video {
-    object-fit: contain;
-  }
-  .mil-hero-1 .mil-hero-main {
-    height: 97vh;
-  }
-}
 
 .mil-hero-1 .mil-hero-main .mil-hero-text {
   width: 100%;
