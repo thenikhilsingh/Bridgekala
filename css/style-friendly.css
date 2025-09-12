@@ -5626,6 +5626,57 @@ footer
   gap: 20px;
 }
 
+@media (max-width: 1880px) {
+  .quote-area-bg {
+    object-fit: contain;
+    object-position: right;
+  }
+  .quote-btn {
+    justify-content: left !important;
+  }
+}
+@media (max-width: 1635px) {
+  .quote-area-text {
+    font-size: 41px;
+  }
+}
+@media (max-width: 1480px) {
+  .quote-area-text {
+    font-size: 33px;
+    width: 50%;
+  }
+}
+
+@media (max-width: 1400px) {
+  .quote-area {
+    height: fit-content;
+  }
+}
+
+@media (max-width: 875px) {
+  .quote-btn a{
+    padding: 0px 20px !important;
+    height: 55px !important;
+  }
+}
+@media (max-width: 730px) {
+  .quote-area-text {
+        font-size: 26px;
+       
+    }
+}
+@media (max-width: 609px) {
+ .quote-area-text {
+        font-size: 14px;
+    }
+    .quote-btn a {
+        padding: 0px 9px !important;
+        height: 36px !important;
+    }
+}
+
+
+
 /* slider styles */
 /* Carousel Card Scaling */
 .slide.card-cont {
@@ -5809,7 +5860,6 @@ footer
   }
   .slide img {
     height: 23px;
-    
   }
   .card-text-cont h3 {
     font-size: 14px;
@@ -5832,7 +5882,7 @@ footer
   .slide.active {
     height: 325px;
   }
-   .slide img {
+  .slide img {
     height: 15px;
   }
   .card-text-cont h3 {
