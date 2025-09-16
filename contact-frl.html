@@ -69,7 +69,7 @@
           </div>
           <div class="mil-buttons-tp-frame mil-c-gone">
             <p class="mil-stylized mil-m1 mil-phone">
-              <span class="mil-m2">Phone:</span> +91 9212342345
+              <span class="mil-m2">Phone:</span> +91 9560027345
             </p>
             <div class="mil-buttons">
               <a href="contact-frl.html" class="mil-tp-btn">
@@ -401,32 +401,53 @@
             <div class="container">
               <div class="mil-half-container mil-up">
                 <div class="mil-text-box mil-g-m1 mil-p-160-160">
-                  <h2 class="mil-display3 mil-rubber mil-mb60 mil-m4 mil-up">let's <span class="mil-a1">talk</span>
+                  <h2 class="mil-display3 mil-rubber mil-mb60 mil-m4 mil-up">
+                    let's <span class="mil-a1">talk</span>
                   </h2>
                   <form id="contact-form">
-  <div class="row mil-aic">
-    <div class="col-md-6 mil-mb30 mil-up">
-      <input type="text" name="from_name" placeholder="What's your name" required />
-    </div>
-    <div class="col-md-6 mil-mb30 mil-up">
-      <input type="email" name="from_email" placeholder="Your Email" required />
-    </div>
-    <div class="col-md-12 mil-mb30 mil-up">
-      <textarea name="message" placeholder="Tell us about your project" required></textarea>
-    </div>
-    <div class="col-md-6 mil-mb30">
-      <p class="mil-text-sm mil-up">
-        *We promise not to disclose your personal information to third parties.
-      </p>
-    </div>
-    <div class="col-md-6 mil-mb30 mil-768-mb0 mil-jce mil-768-jcc mil-up">
-      <button type="submit" style="color: white" class="mil-btn mil-a2 mil-c-gone">
-        Send message
-      </button>
-    </div>
-  </div>
-</form>
-
+                    <div class="row mil-aic">
+                      <div class="col-md-6 mil-mb30 mil-up">
+                        <input
+                          type="text"
+                          name="from_name"
+                          placeholder="What's your name"
+                          required
+                        />
+                      </div>
+                      <div class="col-md-6 mil-mb30 mil-up">
+                        <input
+                          type="email"
+                          name="from_email"
+                          placeholder="Your Email"
+                          required
+                        />
+                      </div>
+                      <div class="col-md-12 mil-mb30 mil-up">
+                        <textarea
+                          name="message"
+                          placeholder="Tell us about your project"
+                          required
+                        ></textarea>
+                      </div>
+                      <div class="col-md-6 mil-mb30">
+                        <p class="mil-text-sm mil-up">
+                          *We promise not to disclose your personal information
+                          to third parties.
+                        </p>
+                      </div>
+                      <div
+                        class="col-md-6 mil-mb30 mil-768-mb0 mil-jce mil-768-jcc mil-up"
+                      >
+                        <button
+                          type="submit"
+                          style="color: white"
+                          class="mil-btn mil-a2 mil-c-gone"
+                        >
+                          Send message
+                        </button>
+                      </div>
+                    </div>
+                  </form>
                 </div>
                 <div class="mil-image-box mil-c-gone">
                   <div class="mil-image-frame">
@@ -513,9 +534,8 @@
                         <li>
                           <a href="#." target="_blank" data-no-swup>
                             <svg
-                            
                               fill="currentColor"
-                              style="color: white;"
+                              style="color: white"
                               width="20px"
                               height="20px"
                               viewBox="0 0 24 24"
@@ -534,9 +554,8 @@
                         <li>
                           <a href="#." target="_blank" data-no-swup>
                             <svg
-                            
                               width="20px"
-                              style="color: white;"
+                              style="color: white"
                               height="20px"
                               viewBox="0 -3 256 256"
                               version="1.1"
@@ -559,9 +578,8 @@
                         <li>
                           <a href="#." target="_blank" data-no-swup>
                             <svg
-                            
                               fill="currentColor"
-                              style="color: white;"
+                              style="color: white"
                               width="20px"
                               height="20px"
                               viewBox="0 0 32 32"
@@ -578,9 +596,8 @@
                         <li>
                           <a href="#." target="_blank" data-no-swup>
                             <svg
-                            
                               fill="currentColor"
-                              style="color: white;"
+                              style="color: white"
                               width="20px"
                               height="20px"
                               viewBox="0 0 24 24"
@@ -598,9 +615,8 @@
                         <li>
                           <a href="#." target="_blank" data-no-swup>
                             <svg
-                            
                               fill="currentColor"
-                              style="color: white;"
+                              style="color: white"
                               width="20px"
                               height="20px"
                               viewBox="0 0 32 32"
@@ -660,36 +676,36 @@
 
     <!-- pixy js -->
     <script src="js/main.js"></script>
-    
   </body>
   <script src="https://cdn.emailjs.com/sdk/3.11.0/email.min.js"></script>
-<script>
-  (function(){
-    emailjs.init("G8aGWQLoPDSoaeYkn"); // 🔑 yaha apna EmailJS public key daalo
-  })();
+  <script>
+    (function () {
+      emailjs.init("G8aGWQLoPDSoaeYkn"); // 🔑 yaha apna EmailJS public key daalo
+    })();
 
-  const form = document.getElementById("contact-form");
+    const form = document.getElementById("contact-form");
 
-  form.addEventListener("submit", function(e) {
-    e.preventDefault(); // 🚫 stop page refresh
+    form.addEventListener("submit", function (e) {
+      e.preventDefault(); // 🚫 stop page refresh
 
-    emailjs.sendForm("service_5nd2q4l", "template_cpzuhgg", this)
-      .then(() => {
-        // Success message
-        const btn = form.querySelector("button");
-        btn.innerText = "✅ Sent!";
-        btn.disabled = true;
+      emailjs.sendForm("service_5nd2q4l", "template_cpzuhgg", this).then(
+        () => {
+          // Success message
+          const btn = form.querySelector("button");
+          btn.innerText = "✅ Sent!";
+          btn.disabled = true;
 
-        // Form reset after few seconds
-        setTimeout(() => {
-          form.reset();
-          btn.innerText = "Send message";
-          btn.disabled = false;
-        }, 3000);
-      }, (error) => {
-        alert("❌ Failed to send: " + JSON.stringify(error));
-      });
-  });
-</script>
-
+          // Form reset after few seconds
+          setTimeout(() => {
+            form.reset();
+            btn.innerText = "Send message";
+            btn.disabled = false;
+          }, 3000);
+        },
+        (error) => {
+          alert("❌ Failed to send: " + JSON.stringify(error));
+        }
+      );
+    });
+  </script>
 </html>
