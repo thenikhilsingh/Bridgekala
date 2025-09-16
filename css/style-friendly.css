@@ -5917,61 +5917,49 @@ footer
 
 /* logo slider */
 
-        @keyframes slides {
-          from {
-            transform: translateX(0);
-          }
-    
-          to {
-            transform: translateX(-50%);
-            /* shift half since duplicated */
-          }
-        }
+@keyframes slides {
+  from {
+    transform: translateX(0);
+  }
 
-        .logos {
-          overflow: hidden;
-          /* padding: 30px 0; */
-          white-space: nowrap;
-          position: relative;
-          width: 100%;
-          box-sizing: border-box;
-        }
-    
-        .logos:before,
-        .logos:after {
-          position: absolute;
-          top: 0;
-          content: '';
-          width: 250px;
-          height: 100%;
-          z-index: 2;
-          pointer-events: none;
-        }
-    
-        .logos:before {
-          left: 0;
-          background: linear-gradient(to left, rgba(255, 255, 255, 0), #fff);
-        }
-    
-        .logos:after {
-          right: 0;
-          background: linear-gradient(to right, rgba(255, 255, 255, 0), #fff);
-        }
-    
-        .logo_items {
-          display: inline-block;
-          animation: slides 35s linear infinite;
-        }
-    
-        .logos:hover .logo_items {
-          animation-play-state: paused;
-        }
-    
-        .logo_items img {
-          height: 80px;
-          width: 250px;
-          display: inline-block;
-          object-fit: cover;
-          margin: 0;
-          padding: 0;
-        }
+  to {
+    transform: translateX(-50%);
+    /* shift half since duplicated */
+  }
+}
+
+.logos {
+  overflow: hidden;
+  /* padding: 30px 0; */
+  white-space: nowrap;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.logos:before,
+.logos:after {
+  position: absolute;
+  top: 0;
+  content: "";
+  width: 250px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.logo_items {
+  display: inline-block;
+  animation: slides 35s linear infinite;
+}
+
+.logo_items img {
+  height: 80px;
+  width: 250px;
+  display: inline-block;
+  object-fit: cover;
+  margin: 0;
+  padding: 0;
+}
