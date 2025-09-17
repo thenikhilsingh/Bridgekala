@@ -1,3 +1,22 @@
+//Preloader's Logic
+document.addEventListener("DOMContentLoaded", function () {
+  const preloader = document.querySelector(".mil-preloader");
+
+  // Check if preloader was already shown in this session
+  if (!sessionStorage.getItem("preloaderShown")) {
+    // First time in this tab → show preloader
+    sessionStorage.setItem("preloaderShown", "true");
+
+    // Example: hide after 2.5 seconds
+    setTimeout(() => {
+      preloader.style.display = "none";
+    }, 2500);
+  } else {
+    // Already shown in this tab → hide instantly
+    preloader.style.display = "none";
+  }
+});
+
 // Initialize Hero Image Slider
 document.addEventListener("DOMContentLoaded", function () {
   if (typeof Swiper !== "undefined") {
