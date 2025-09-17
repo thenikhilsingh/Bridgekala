@@ -5919,7 +5919,7 @@ footer
 :root {
   --size: clamp(8rem, 1rem + 10vmin, 12rem);
   --gap: calc(var(--size) / 8);
-  --duration: 15s;
+  --duration: 55s;
   --scroll-start: 0;
   --scroll-end: calc(-100% - var(--gap));
 }
@@ -5970,7 +5970,7 @@ footer
   width: var(--size);
   height: 70px;
   object-fit: contain;
-  /* background: rgb(106, 43, 165); */
+  background: rgb(0, 0, 0);
   /* optional background */
   padding: calc(var(--size) / 15);
   border-radius: 0.5rem;
