@@ -5930,6 +5930,7 @@ footer
   gap: var(--gap);
   max-width: 100vw;
   overflow: hidden;
+  margin-top: 50px;
 }
 
 .marquee {
@@ -5967,7 +5968,7 @@ footer
 .marquee img {
   display: block;
   width: var(--size);
-  height: auto;
+  height: 60px;
   object-fit: contain;
   background: black;
   /* optional background */
