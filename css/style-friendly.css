@@ -5919,7 +5919,7 @@ footer
 :root {
   --size: clamp(8rem, 1rem + 10vmin, 12rem);
   --gap: calc(var(--size) / 8);
-  --duration: 55s;
+  --duration: 35s;
   --scroll-start: 0;
   --scroll-end: calc(-100% - var(--gap));
 }
