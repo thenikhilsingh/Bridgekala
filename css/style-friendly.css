@@ -5968,9 +5968,9 @@ footer
 .marquee img {
   display: block;
   width: var(--size);
-  height: 60px;
+  height: 70px;
   object-fit: contain;
-  background: black;
+  /* background: rgb(106, 43, 165); */
   /* optional background */
   padding: calc(var(--size) / 15);
   border-radius: 0.5rem;
