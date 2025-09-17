@@ -5971,7 +5971,7 @@ footer
            width: var(--size);
            height: auto;
            object-fit: contain;
-           background: #FFE018;
+           background: rgb(230, 208, 226);
            /* optional background */
            padding: calc(var(--size) / 15);
            border-radius: 0.5rem;
