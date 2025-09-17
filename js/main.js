@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Example: hide after 2.5 seconds
     setTimeout(() => {
       preloader.style.display = "none";
-    }, 2500);
+    }, 7000);
   } else {
     // Already shown in this tab → hide instantly
     preloader.style.display = "none";
